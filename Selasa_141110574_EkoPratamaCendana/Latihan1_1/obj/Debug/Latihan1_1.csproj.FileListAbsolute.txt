@@ -7,3 +7,6 @@ E:\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.Properties
 E:\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.csproj.GenerateResource.Cache
 E:\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.exe
 E:\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.pdb
+E:\Selasa_141110574_EkoPratamaCendana\Selasa_141110574_EkoPratamaCendana\Latihan1_1\bin\Debug\Latihan1_1.exe.config
+E:\Selasa_141110574_EkoPratamaCendana\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.exe
+E:\Selasa_141110574_EkoPratamaCendana\Selasa_141110574_EkoPratamaCendana\Latihan1_1\obj\Debug\Latihan1_1.pdb
