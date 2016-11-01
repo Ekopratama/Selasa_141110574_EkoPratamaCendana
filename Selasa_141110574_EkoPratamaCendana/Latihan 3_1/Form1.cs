@@ -78,36 +78,10 @@ namespace Latihan_3_1
         {
             float z;
             if (ukuran.Text == "")
-                z = 12;
+            { z = 12; }
             else
-                z = (float)Convert.ToDouble(ukuran.SelectedItem);
-            //FontStyle a = new FontStyle();
-            //if (tebal.Checked)
-            //{
-            //    a = FontStyle.Bold;
-            //    if (miring.Checked)
-            //        a = FontStyle.Italic;
-            //    else if (garis.Checked)
-            //        a = FontStyle.Underline;
-            //}
-            //else if (miring.Checked)
-            //{
-            //    a = FontStyle.Italic;
-            //    if (tebal.Checked)
-            //        a = FontStyle.Bold;
-            //    else if (garis.Checked)
-            //        a = FontStyle.Underline;
-            //}
-            //else if (garis.Checked)
-            //{
-            //    a = FontStyle.Underline;
-            //    if (tebal.Checked)
-            //        a = FontStyle.Bold;
-            //    else if (miring.Checked)
-            //        a = FontStyle.Italic;
-            //}
-            //else
-            //    a = FontStyle.Regular;
+            { z = (float)Convert.ToDouble(ukuran.SelectedItem); }
+                
             FontStyle a = (tebal.Checked) ? FontStyle.Bold : FontStyle.Regular;
             a |= (miring.Checked) ? FontStyle.Italic : FontStyle.Regular;
             a |= (garis.Checked) ? FontStyle.Underline : FontStyle.Regular;
@@ -149,15 +123,6 @@ namespace Latihan_3_1
                 {
                     warna.Text = "";
                 }
-
-                if (rtb1.SelectionFont.Style.ToString().IndexOf("Bold") != -1)
-                    tebal.Checked = true;
-
-                if (rtb1.SelectionFont.Style.ToString().IndexOf("Italic") != -1)
-                    miring.Checked = true;
-
-                if (rtb1.SelectionFont.Style.ToString().IndexOf("Underline") != -1)
-                    garis.Checked = true;
             }
             else
             {

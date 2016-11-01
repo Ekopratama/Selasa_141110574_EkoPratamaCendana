@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.rtb1 = new System.Windows.Forms.RichTextBox();
             this.ukuran = new System.Windows.Forms.ToolStripComboBox();
             this.tebal = new System.Windows.Forms.ToolStripButton();
             this.miring = new System.Windows.Forms.ToolStripButton();
             this.garis = new System.Windows.Forms.ToolStripButton();
             this.jenis = new System.Windows.Forms.ToolStripComboBox();
             this.warna = new System.Windows.Forms.ToolStripComboBox();
+            this.rtb1 = new System.Windows.Forms.RichTextBox();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,18 +55,11 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // rtb1
-            // 
-            this.rtb1.Location = new System.Drawing.Point(0, 28);
-            this.rtb1.Name = "rtb1";
-            this.rtb1.Size = new System.Drawing.Size(530, 382);
-            this.rtb1.TabIndex = 1;
-            this.rtb1.Text = "";
-            // 
             // ukuran
             // 
             this.ukuran.Name = "ukuran";
             this.ukuran.Size = new System.Drawing.Size(121, 28);
+            this.ukuran.SelectedIndexChanged += new System.EventHandler(this.ukuran_SelectedIndexChanged);
             // 
             // tebal
             // 
@@ -77,6 +70,7 @@
             this.tebal.Name = "tebal";
             this.tebal.Size = new System.Drawing.Size(24, 25);
             this.tebal.Text = "B";
+            this.tebal.Click += new System.EventHandler(this.tebal_Click);
             // 
             // miring
             // 
@@ -88,6 +82,7 @@
             this.miring.Name = "miring";
             this.miring.Size = new System.Drawing.Size(23, 25);
             this.miring.Text = "I";
+            this.miring.Click += new System.EventHandler(this.miring_Click);
             // 
             // garis
             // 
@@ -99,16 +94,27 @@
             this.garis.Name = "garis";
             this.garis.Size = new System.Drawing.Size(25, 25);
             this.garis.Text = "U";
+            this.garis.Click += new System.EventHandler(this.garis_Click);
             // 
             // jenis
             // 
             this.jenis.Name = "jenis";
             this.jenis.Size = new System.Drawing.Size(121, 28);
+            this.jenis.SelectedIndexChanged += new System.EventHandler(this.jenis_SelectedIndexChanged);
             // 
             // warna
             // 
             this.warna.Name = "warna";
             this.warna.Size = new System.Drawing.Size(121, 28);
+            // 
+            // rtb1
+            // 
+            this.rtb1.Location = new System.Drawing.Point(0, 28);
+            this.rtb1.Name = "rtb1";
+            this.rtb1.Size = new System.Drawing.Size(530, 382);
+            this.rtb1.TabIndex = 1;
+            this.rtb1.Text = "";
+            this.rtb1.SelectionChanged += new System.EventHandler(this.rtb1_SelectionChanged);
             // 
             // Form1
             // 
