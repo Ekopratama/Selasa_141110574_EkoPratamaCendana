@@ -161,5 +161,25 @@ namespace Latihan_3_1
                 return;
             berubah();
         }
+
+        private void ukuran_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jenis_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void warna_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtb1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

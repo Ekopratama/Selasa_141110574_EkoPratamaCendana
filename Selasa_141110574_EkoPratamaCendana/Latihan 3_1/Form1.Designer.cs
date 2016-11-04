@@ -60,6 +60,7 @@
             this.ukuran.Name = "ukuran";
             this.ukuran.Size = new System.Drawing.Size(121, 28);
             this.ukuran.SelectedIndexChanged += new System.EventHandler(this.ukuran_SelectedIndexChanged);
+            this.ukuran.Click += new System.EventHandler(this.ukuran_Click);
             // 
             // tebal
             // 
@@ -101,11 +102,13 @@
             this.jenis.Name = "jenis";
             this.jenis.Size = new System.Drawing.Size(121, 28);
             this.jenis.SelectedIndexChanged += new System.EventHandler(this.jenis_SelectedIndexChanged);
+            this.jenis.Click += new System.EventHandler(this.jenis_Click);
             // 
             // warna
             // 
             this.warna.Name = "warna";
             this.warna.Size = new System.Drawing.Size(121, 28);
+            this.warna.Click += new System.EventHandler(this.warna_Click);
             // 
             // rtb1
             // 
@@ -115,6 +118,7 @@
             this.rtb1.TabIndex = 1;
             this.rtb1.Text = "";
             this.rtb1.SelectionChanged += new System.EventHandler(this.rtb1_SelectionChanged);
+            this.rtb1.TextChanged += new System.EventHandler(this.rtb1_TextChanged);
             // 
             // Form1
             // 
