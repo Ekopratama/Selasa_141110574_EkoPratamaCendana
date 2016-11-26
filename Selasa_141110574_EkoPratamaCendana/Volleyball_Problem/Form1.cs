@@ -17,85 +17,75 @@ namespace Volleyball_Problem
             InitializeComponent();
         }
 
-        public const int Modular = 1000000007;
+        const long MOD = 1000000007;
 
-        static bool Valid(int a, int b)
+        private void btnhitung_Click(object sender, EventArgs e)
         {
-            if (a < 25) return false;
-            if (a == 25) return b <= 23;
-            return b == (a - 2);
-        }
-
-        public static void Swap<T>(ref T left, ref T right)
-        {
-            T temp;
-            temp = left;
-            left = right;
-            right = temp;
-        }
-
-        public static int nCr(int n, int r, int mod)
-        {
-            if (n < r) Swap(ref n, ref r);
-            if (n < 1 || r < 1) return 1;
-            var row = new int[r];
-            for (var i = 0; i < r; row[i++] = 1) { }
-
-            for (int i = 2; i < r; ++i)
+            long a, b, hasil;
+            a = Convert.ToInt64(txt1.Text);
+            b = Convert.ToInt64(txt2.Text);
+            if (a < b)
             {
-                for (int j = i - 1; j > 0; --j)
-                {
-                    row[j] = (row[j] + row[j - 1]) % mod;
-                }
+                long temp = a;
+                a = b;
+                b = temp;
             }
-            --r;
-            int sum = row[r];
-            for (int i = 0; i < n; ++i)
-            {
-                for (int j = r; j > 0; --j)
-                {
-                    row[j] = (row[j] + row[j - 1]) % mod;
-                }
-                sum = (sum + row[r]) % mod;
-            }
-            return sum;
-        }
 
-        private static int pow(int baseNo, int exponent, int mod)
-        {
-            if (exponent < 2)
+            if ((a > 25 && a - b != 2) || (a - b < 2) || (a < 25))
             {
-                return (exponent < 1) ? 1 : baseNo;
-            }
-            long product = pow(baseNo, exponent >> 1, mod);
-            product = (product * product) % mod;
-            return ((exponent & 1) == 1) ? (int)((product * baseNo) % mod) : (int)(product);
-        }
-
-        private void Buttonhasil_Click(object sender, EventArgs e)
-        {
-            var a = Convert.ToInt32(txt1.Text);
-            var b = Convert.ToInt32(txt2.Text);
-            int result;
-
-            if (a < b) Swap(ref a, ref b);
-            if (!Valid(a, b))
-            {
-                result = 0;
+                hasil = 0;
             }
             else
             {
-                if (a > 25)
-                {
-                    result = nCr(24, 24, Modular);
-                    result = (int)((((long)result) * pow(2, b - 24, Modular)) % Modular);
-                }
-                else
-                {
-                    result = nCr(a - 1, b, Modular);
-                }
+                hasil = kombinasi(Math.Min(a + b - 1, 47), Math.Min(a - 1, 24));
+                hasil *= powerMod(2, a - 25);
+                hasil %= MOD;
             }
-            txthasil.Text = result.ToString();
+            txthasil.Text = hasil.ToString();
+        }
+
+        private long kombinasi(long n, long r)
+        {
+            if (n < r) return 0;
+            long hasil = 1;
+            hasil *= faktorial(n);
+            hasil %= MOD;
+            hasil *= InverseEuler(faktorial(n - r));
+            hasil %= MOD;
+            hasil *= InverseEuler(faktorial(r));
+            hasil %= MOD;
+            return hasil;
+        }
+
+        private long InverseEuler(long n)
+        {
+            return powerMod(n, MOD - 2);
+        }
+
+        private long faktorial(long n)
+        {
+            long hasil = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                hasil *= i;
+                hasil %= MOD;
+            }
+            return hasil;
+        }
+
+        private long powerMod(long b, long e)
+        {
+            long res = 1;
+            while (e > 0)
+            {
+                if (e % 2 == 1)
+                {
+                    res = (res * b) % MOD;
+                }
+                b = (b * b) % MOD;
+                e /= 2;
+            }
+            return res % MOD;
         }
     }
 }

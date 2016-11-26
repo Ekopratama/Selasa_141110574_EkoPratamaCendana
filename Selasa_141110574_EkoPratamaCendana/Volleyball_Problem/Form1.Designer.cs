@@ -33,7 +33,7 @@
             this.txt1 = new System.Windows.Forms.TextBox();
             this.txt2 = new System.Windows.Forms.TextBox();
             this.txthasil = new System.Windows.Forms.TextBox();
-            this.btnhasil = new System.Windows.Forms.Button();
+            this.btnhitung = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -76,22 +76,22 @@
             this.txthasil.Size = new System.Drawing.Size(125, 20);
             this.txthasil.TabIndex = 4;
             // 
-            // btnhasil
+            // btnhitung
             // 
-            this.btnhasil.Location = new System.Drawing.Point(80, 110);
-            this.btnhasil.Name = "btnhasil";
-            this.btnhasil.Size = new System.Drawing.Size(125, 23);
-            this.btnhasil.TabIndex = 5;
-            this.btnhasil.Text = "Hasil";
-            this.btnhasil.UseVisualStyleBackColor = true;
-            this.btnhasil.Click += new System.EventHandler(this.Buttonhasil_Click);
+            this.btnhitung.Location = new System.Drawing.Point(80, 110);
+            this.btnhitung.Name = "btnhitung";
+            this.btnhitung.Size = new System.Drawing.Size(125, 23);
+            this.btnhitung.TabIndex = 5;
+            this.btnhitung.Text = "Hasil";
+            this.btnhitung.UseVisualStyleBackColor = true;
+            this.btnhitung.Click += new System.EventHandler(this.btnhitung_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 11F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(288, 193);
-            this.Controls.Add(this.btnhasil);
+            this.Controls.Add(this.btnhitung);
             this.Controls.Add(this.txthasil);
             this.Controls.Add(this.txt2);
             this.Controls.Add(this.txt1);
@@ -111,7 +111,7 @@
         private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.TextBox txt2;
         private System.Windows.Forms.TextBox txthasil;
-        private System.Windows.Forms.Button btnhasil;
+        private System.Windows.Forms.Button btnhitung;
     }
 }
 
